@@ -93,6 +93,6 @@ RUN export RISCV_BIN=/opt/riscv32i/bin/riscv32-unknown-elf- && cd SaxonSoc/hardw
 # This will fail due to lack of a device
 #RUN export RISCV_BIN=/opt/riscv32i/bin/riscv32-unknown-elf- && cd SaxonSoc/hardware/synthesis/blackicemx/ && make prog 
 
-# Configure Services and Port
-COPY start.sh /start.sh
+# Dummy startup script so container keeps running
+COPY start.sh start.sh
 CMD ["./start.sh"]
